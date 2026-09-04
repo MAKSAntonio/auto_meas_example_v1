@@ -142,6 +142,10 @@ class meas:
 
 
 if __name__ == '__main__':
+    b = select_board_driver()
+    g = select_gen_driver('192.168.1.23')
+    s = select_spec_driver('192.168.1.24')
+
     parser = argparse.ArgumentParser(
         description='Автоматизированные измерения: калибровка кабеля или оценка КШ'
     )
@@ -158,15 +162,11 @@ if __name__ == '__main__':
     args = parser.parse_args()
 
     # Если не указан ни один флаг — выводим справку
-    args.calibrate = True
-    args.nf = True
+    # args.calibrate = True
+    # args.nf = True
     if not args.calibrate and not args.nf:
         parser.print_help()
         exit(1)
-
-    b = select_board_driver()
-    g = select_gen_driver('192.168.1.23')
-    s = select_spec_driver('192.168.1.24')
 
     if (b == False) or (g == False) or (s == False):
         print('Обеспечьте корректное подключение стенда')
