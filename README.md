@@ -77,5 +77,3 @@ MIT — свободное использование, модификация, �
 Максименко Антон
 Emale: maksimenko.ant@gmail.com
 Профиль на Хабре: https://habr.com/ru/users/MaksAnt/
-
-
