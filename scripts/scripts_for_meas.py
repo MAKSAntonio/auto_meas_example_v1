@@ -115,7 +115,6 @@ class meas:
         self.s.set_cont_sweep()
         self.s.set_meas_off()
         name_dir = os.path.join(BASE_DIR, 'results')
-        # name_dir = 'results'
         if os.path.exists(name_dir) and os.path.isdir(name_dir):
             print(f"Директория '{name_dir}' уже существует.")
         else:
@@ -184,7 +183,7 @@ if __name__ == '__main__':
         if args.nf:
             print('\n=== Запуск измерения КШ ===\n')
             m.meas_NF(
-                farray=np.arange(950, 2151, 50),
+                farray=np.arange(950, 2151, 10),
                 name_pickle='loss_cableIN.pickle'
             )
 

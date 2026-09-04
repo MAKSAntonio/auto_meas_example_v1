@@ -2,8 +2,6 @@ import logging
 import socket
 from drivers.scpi_device import SCPIdevice
 
-
-
 class SpecBase(SCPIdevice):  # Базовый класс драйвера
     # Словарь команд – каждая модель анализатора переопределяет под себя
     COMMAND_MAP = {
@@ -121,10 +119,6 @@ class SpecBase(SCPIdevice):  # Базовый класс драйвера
         avg_on_cmd = self.COMMAND_MAP['avg_on']
         avg_cnt_cmd = self.COMMAND_MAP['avg_count']  # усреднение 5 раз
         self.send([avg_on_cmd, avg_cnt_cmd])
-        # i = 0
-        # while i < 6:  # Ожидание усреднения
-        #     i += 1
-        #     self.prepare_single_sweep()
         self.prepare_single_sweep()
         read_cmd = self.COMMAND_MAP['chp_read']
         result = self.send([read_cmd], do_receive=1)
