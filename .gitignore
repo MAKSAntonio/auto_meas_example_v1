@@ -1,0 +1,25 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+env/
+.venv/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# Logs
+*.log
+
+# Результаты измерений и калибровок (генерируются скриптами)
+# calib_cables/
+# results/
+
+# Pickle и текстовые файлы с результатами
+# *.pickle
+# *.txt
